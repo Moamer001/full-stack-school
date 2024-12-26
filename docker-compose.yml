@@ -11,7 +11,7 @@ services:
     ports:
       - '5432:5432'
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - postgres://default:WCX6RQ0YKzbG@ep-patient-boat-a4kxuyin-pooler.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require
     
   app:
     build: .
