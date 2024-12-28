@@ -129,17 +129,7 @@ const ResultForm = ({
               </option>
             ))}
           </select>
-          <select
-            className="ring-[1.5px] ring-gray-300 p-2 rounded-md text-sm w-full"
-            {...register("examId")}
-            defaultValue={data?.teachers}
-          >
-            {lessons.map((lesson: { id: number; name: string }) => (
-              <option value={lesson.id} key={lesson.id}>
-                {lesson.name}
-              </option>
-            ))}
-          </select>
+
           {errors.examId?.message && (
             <p className="text-xs text-red-400">
               {errors.examId.message.toString()}
